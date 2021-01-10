@@ -1,0 +1,1913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/repeat_whiteback"
+    android:divider="@layout/divider"
+    android:showDividers="middle"
+    android:dividerPadding="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="75dp"
+            android:layout_height="22dp"
+            android:gravity="center"
+            android:text="プレイ人数" />
+
+        <Spinner
+            android:id="@+id/playerNum"
+            android:layout_width="100dp"
+            android:layout_height="22dp"
+            android:splitMotionEvents="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/totalTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:gravity="center"
+                android:text="総プレイ時間"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/totalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/currentTurn"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:gravity="right"
+                android:text="1"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/currentTurnLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="ターン目"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/palyer1"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:gravity="center"
+            android:text="プレイヤー1"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player1totalTimeLabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="総プレイ時間"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1totalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player1dice2Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice2"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice2Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice3Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="3が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice3"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice3Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice4Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="4が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice4"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice4Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player1dice5Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="5が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice5"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice5Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice6Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="6が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice6"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice6Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice7Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="7が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice7"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice7Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player1dice8Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="8が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice8"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice8Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice9Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="9が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice9"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice9Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice10Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="10が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice10"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice10Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player1dice11Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="11が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice11"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice11Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice12Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="12が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice12"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dice12Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dicetotalLabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="合計"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player1dicetotal"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/palyer2"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:gravity="center"
+            android:text="プレイヤー2"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player2totalTimeLabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="総プレイ時間"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2totalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player2dice2Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="2が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice2"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice2Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice3Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="3が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice3"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice3Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice4Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="4が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice4"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice4Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player2dice5Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="5が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice5"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice5Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice6Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="6が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice6"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice6Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice7Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="7が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice7"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice7Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player2dice8Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="8が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice8"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice8Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice9Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="9が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice9"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice9Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice10Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="10が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice10"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice10Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player2dice11Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="11が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice11"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice11Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice12Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="12が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice12"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dice12Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dicetotalLabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="合計"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player2dicetotal"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/palyer3"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="プレイヤー3"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player3totalTimeLabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="総プレイ時間"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3totalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player3dice2Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="2が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice2"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice2Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice3Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="3が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice3"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice3Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice4Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="4が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice4"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice4Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player3dice5Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="5が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice5"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice5Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice6Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="6が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice6"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice6Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice7Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="7が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice7"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice7Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player3dice8Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="8が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice8"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice8Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice9Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="9が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice9"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice9Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice10Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="10が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice10"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice10Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player3dice11Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="11が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice11"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice11Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice12Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="12が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice12"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dice12Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dicetotalLabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="合計"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player3dicetotal"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/palyer4"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:gravity="center"
+            android:text="プレイヤー4"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player4totalTimeLabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="総プレイ時間"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4totalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player4dice2Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="2が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice2"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice2Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice3Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="3が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice3"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice3Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice4Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="4が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice4"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice4Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player4dice5Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="5が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice5"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice5Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice6Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="6が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice6"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice6Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice7Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="7が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice7"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice7Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player4dice8Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="8が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice8"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice8Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice9Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="9が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice9"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice9Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice10Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="10が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice10"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice10Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player4dice11Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="11が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice11"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice11Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice12Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="12が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice12"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dice12Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dicetotalLabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="合計"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/player4dicetotal"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/playerTotal"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:gravity="center"
+            android:text="合計"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playerTotalTimeLabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="総プレイ時間"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playerTotaldice2Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="2が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice2"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice2Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice3Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="3が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice3"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice3Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice4Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="4が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice4"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice4Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playerTotaldice5Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="5が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice5"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice5Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice6Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="6が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice6"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice6Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice7Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="7が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice7"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice7Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playerTotaldice8Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="8が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice8"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice8Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice9Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="9が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice9"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice9Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice10Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="10が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice10"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice10Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playerTotaldice11Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="11が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice11"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice11Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice12Label"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="12が出た回数"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice12"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldice12Rate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(0%)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldicetotalLabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="合計"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/playerTotaldicetotal"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="0"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/gameToggle"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="ゲームを開始する" />
+
+</LinearLayout>

@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/repeat_whiteback">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:divider="@layout/divider"
+        android:dividerPadding="10dp"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:divider="@layout/divider"
+            android:dividerPadding="10dp"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/fixMap"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layoutDirection="rtl"
+                    android:switchPadding="5dp"
+                    android:text="マップランダム"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Switch
+                    android:id="@+id/alphabetOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layoutDirection="rtl"
+                    android:switchPadding="5dp"
+                    android:text="アルファベット時計回り" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/fixFrame"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layoutDirection="rtl"
+                    android:switchPadding="5dp"
+                    android:text="海フレームランダム" />
+
+                <Switch
+                    android:id="@+id/fixNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layoutDirection="rtl"
+                    android:switchPadding="5dp"
+                    android:text="数字ランダム" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/fixTerrain"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layoutDirection="rtl"
+                    android:switchPadding="5dp"
+                    android:text="地形ランダム" />
+
+                <Switch
+                    android:id="@+id/fixDesert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layoutDirection="rtl"
+                    android:switchPadding="5dp"
+                    android:text="砂漠ランダム" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/boardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp">
+
+            <!--
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/seaside6"
+                            android:layout_width="200dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:cropToPadding="false"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/seaside6" />
+
+                        <ImageView
+                            android:id="@+id/seaside2"
+                            android:layout_width="200dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/seaside2" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="-1dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/seaside5"
+                            android:layout_width="200dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/seaside5" />
+
+                        <ImageView
+                            android:id="@+id/seaside3"
+                            android:layout_width="200dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/seaside3" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/seaside1"
+                    android:layout_width="265dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginRight="75dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/seaside1" />
+
+                <ImageView
+                    android:id="@+id/seaside4"
+                    android:layout_width="265dp"
+                    android:layout_height="149dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/seaside4" />
+
+            </LinearLayout>
+            -->
+
+            <ImageView
+                android:id="@+id/sea"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/sea" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="-2dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/harbor1"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="100dp"
+                            android:layout_toLeftOf="@id/harbor2"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/no_harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor2"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="32dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor3"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_toRightOf="@id/harbor2"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/no_harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor16"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="30dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/harbor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/harbor6"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="75dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/wool_harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor17"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="195dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/no_harbor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/harbor5"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="45dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/no_harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor18"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="255dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/brick_harbor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/harbor4"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor13"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="315dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/no_harbor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/harbor9"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="45dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/no_harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor14"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="255dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/lumber_harbor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/harbor8"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="70dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/ore_harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor15"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="210dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/no_harbor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/harbor7"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="102dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/no_harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor12"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="31dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/grain_harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor11"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="13dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/no_harbor" />
+
+                        <ImageView
+                            android:id="@+id/harbor10"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="35dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/harbor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/joint2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="65dp"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/joint_1" />
+
+                        <ImageView
+                            android:id="@+id/joint1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="153dp"
+                            android:layout_marginTop="-5dp"
+                            app:srcCompat="@drawable/joint_6" />
+
+                        <ImageView
+                            android:id="@+id/joint12"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="-15dp"
+                            android:layout_marginTop="-5dp"
+                            app:srcCompat="@drawable/joint_6" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-17dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/joint3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="60dp"
+                            app:srcCompat="@drawable/joint_1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="55dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/joint4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="50dp"
+                            app:srcCompat="@drawable/joint_2" />
+
+                        <ImageView
+                            android:id="@+id/joint11"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="332dp"
+                            android:layout_marginTop="-5dp"
+                            app:srcCompat="@drawable/joint_5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-70dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/joint5"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="54dp"
+                            app:srcCompat="@drawable/joint_2" />
+
+                        <ImageView
+                            android:id="@+id/joint10"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="334dp"
+                            android:layout_marginTop="-2dp"
+                            app:srcCompat="@drawable/joint_5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/joint9"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="320dp"
+                            app:srcCompat="@drawable/joint_4" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-12dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/joint6"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="118dp"
+                            android:layout_marginTop="7dp"
+                            app:srcCompat="@drawable/joint_3" />
+
+                        <ImageView
+                            android:id="@+id/joint7"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="-15dp"
+                            android:layout_marginTop="7dp"
+                            app:srcCompat="@drawable/joint_3" />
+
+                        <ImageView
+                            android:id="@+id/joint8"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="149dp"
+                            android:layout_marginTop="-5dp"
+                            app:srcCompat="@drawable/joint_4" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="22dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/boardLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/frameLayout12">
+
+                        <ImageView
+                            android:id="@+id/terrain1"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/pasture" />
+
+                        <ImageView
+                            android:id="@+id/number1"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num8" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <ImageView
+                            android:id="@+id/terrain12"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/forest" />
+
+                        <ImageView
+                            android:id="@+id/number12"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num10" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/frameLayout12">
+
+                        <ImageView
+                            android:id="@+id/terrain11"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/field" />
+
+                        <ImageView
+                            android:id="@+id/number11"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num9" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/boardLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="-17dp">
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/terrain2"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/pasture" />
+
+                        <ImageView
+                            android:id="@+id/number2"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num3" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/frameLayout2">
+
+                        <ImageView
+                            android:id="@+id/terrain13"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/field" />
+
+                        <ImageView
+                            android:id="@+id/number13"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num5" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/frameLayout13">
+
+                        <ImageView
+                            android:id="@+id/terrain18"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/mountain" />
+
+                        <ImageView
+                            android:id="@+id/number18"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num6" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/frameLayout18">
+
+                        <ImageView
+                            android:id="@+id/terrain10"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/pasture" />
+
+                        <ImageView
+                            android:id="@+id/number10"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num12" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/boardLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-17dp">
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/frameLayout14">
+
+                        <ImageView
+                            android:id="@+id/terrain3"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/forest" />
+
+                        <ImageView
+                            android:id="@+id/number3"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num6" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/frameLayout19">
+
+                        <ImageView
+                            android:id="@+id/terrain14"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/mountain" />
+
+                        <ImageView
+                            android:id="@+id/number14"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num4" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <ImageView
+                            android:id="@+id/terrain19"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/desert" />
+
+                        <ImageView
+                            android:id="@+id/number19"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num0" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/frameLayout19">
+
+                        <ImageView
+                            android:id="@+id/terrain17"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/forest" />
+
+                        <ImageView
+                            android:id="@+id/number17"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num3" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/frameLayout17">
+
+                        <ImageView
+                            android:id="@+id/terrain9"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/hill" />
+
+                        <ImageView
+                            android:id="@+id/number9"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num11" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/boardLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="-17dp">
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/terrain4"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/field" />
+
+                        <ImageView
+                            android:id="@+id/number4"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num2" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/frameLayout4">
+
+                        <ImageView
+                            android:id="@+id/terrain15"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/hill" />
+
+                        <ImageView
+                            android:id="@+id/number15"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num9" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/frameLayout15">
+
+                        <ImageView
+                            android:id="@+id/terrain16"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/mountain" />
+
+                        <ImageView
+                            android:id="@+id/number16"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num11" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/frameLayout16">
+
+                        <ImageView
+                            android:id="@+id/terrain8"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/pasture" />
+
+                        <ImageView
+                            android:id="@+id/number8"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num4" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/boardLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-17dp">
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/frameLayout6">
+
+                        <ImageView
+                            android:id="@+id/terrain5"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/forest" />
+
+                        <ImageView
+                            android:id="@+id/number5"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num5" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <ImageView
+                            android:id="@+id/terrain6"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/field" />
+
+                        <ImageView
+                            android:id="@+id/number6"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num10" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/frameLayout6">
+
+                        <ImageView
+                            android:id="@+id/terrain7"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            app:srcCompat="@drawable/hill" />
+
+                        <ImageView
+                            android:id="@+id/number7"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            app:srcCompat="@drawable/num8" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/initButton"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="初期配置に戻す" />
+
+            <Button
+                android:id="@+id/alphabetButton"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="数字をアルファベット順に並べる" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
